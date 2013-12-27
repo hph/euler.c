@@ -37,9 +37,22 @@ int problem_3(void) {
     return largest_factor;
 }
 
+int problem_4(void) {
+    int i, j, product = 0;
+    for (i = 999; i > 99; i--) {
+        for (j = i; j > 99; j--) {
+            if (i * j > product && is_palindrome(i * j)) {
+                product = i * j;
+            }
+        }
+    }
+    return product;
+}
+
 int main(void) {
     printf("Problem #1: %i\n", problem_1());
     printf("Problem #2: %i\n", problem_2());
-    printf("Problem #2: %i\n", problem_3());
+    printf("Problem #3: %i\n", problem_3());
+    printf("Problem #4: %i\n", problem_4());
     return 0;
 }
