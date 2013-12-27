@@ -20,7 +20,7 @@ int problem_2(void) {
         a = b;
         b = tmp;
         if (a % 2 == 0) {
-          sum += a;
+            sum += a;
         }
     }
     return sum;
@@ -81,12 +81,12 @@ int problem_7(void) {
 int problem_9(void) {
     int i, j, k;
     for (i = 1000; i > 0; i--) {
-      for (j = i - 1; j > 0; j--) {
-          k = 1000 - i - j;
-          if (triplet(i, j, k)) {
-              return i * j * k;
-          }
-      }
+        for (j = i - 1; j > 0; j--) {
+            k = 1000 - i - j;
+            if (triplet(i, j, k)) {
+                return i * j * k;
+            }
+        }
     }
     return 0;
 }
