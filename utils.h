@@ -41,3 +41,7 @@ int gcd(int m, int n) {
 int lcm(int m, int n) {
     return m / gcd(m, n) * n;
 }
+
+int triplet(int a, int b, int c) {
+    return pow(a, 2) + pow(b, 2) == pow(c, 2);
+}

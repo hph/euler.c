@@ -78,6 +78,19 @@ int problem_7(void) {
     return i;
 }
 
+int problem_9(void) {
+    int i, j, k;
+    for (i = 1000; i > 0; i--) {
+      for (j = i - 1; j > 0; j--) {
+          k = 1000 - i - j;
+          if (triplet(i, j, k)) {
+              return i * j * k;
+          }
+      }
+    }
+    return 0;
+}
+
 int main(void) {
     printf("Problem #1: %i\n", problem_1());
     printf("Problem #2: %i\n", problem_2());
@@ -86,5 +99,6 @@ int main(void) {
     printf("Problem #5: %i\n", problem_5());
     printf("Problem #6: %i\n", problem_6());
     printf("Problem #7: %i\n", problem_7());
+    printf("Problem #9: %i\n", problem_9());
     return 0;
 }
