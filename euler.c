@@ -1,3 +1,4 @@
+#include <math.h>
 #include <stdio.h>
 
 #include "utils.h"
@@ -57,11 +58,21 @@ int problem_5(void) {
     return n;
 }
 
+int problem_6(void) {
+    int i, sum_of_squares = 0, sum;
+    for (i = 1; i <= 100; i++) {
+        sum_of_squares += pow(i, 2);
+    }
+    sum = 100 * (100 + 1) / 2;
+    return pow(sum, 2) - sum_of_squares;
+}
+
 int main(void) {
     printf("Problem #1: %i\n", problem_1());
     printf("Problem #2: %i\n", problem_2());
     printf("Problem #3: %i\n", problem_3());
     printf("Problem #4: %i\n", problem_4());
     printf("Problem #5: %i\n", problem_5());
+    printf("Problem #6: %i\n", problem_6());
     return 0;
 }
