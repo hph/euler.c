@@ -13,11 +13,11 @@ int problem_1(void) {
 }
 
 int problem_2(void) {
-    int a = 0, b = 1, c, sum = 0;
+    int a = 0, b = 1, tmp, sum = 0;
     while (a < 4000000) {
-        c = a + b;
+        tmp = a + b;
         a = b;
-        b = c;
+        b = tmp;
         if (a % 2 == 0) {
           sum += a;
         }
@@ -49,10 +49,19 @@ int problem_4(void) {
     return product;
 }
 
+int problem_5(void) {
+    int i, n = lcm(2, 3);
+    for (i = 4; i < 21; i++) {
+        n = lcm(n, i);
+    }
+    return n;
+}
+
 int main(void) {
     printf("Problem #1: %i\n", problem_1());
     printf("Problem #2: %i\n", problem_2());
     printf("Problem #3: %i\n", problem_3());
     printf("Problem #4: %i\n", problem_4());
+    printf("Problem #5: %i\n", problem_5());
     return 0;
 }

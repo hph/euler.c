@@ -17,7 +17,7 @@ int is_prime(int n) {
 
 int reverse_int(int n) {
     int reversed = 0;
-    while (n > 0) {
+    while (n) {
         reversed = reversed * 10 + (n % 10);
         n = n / 10;
     }
@@ -26,4 +26,18 @@ int reverse_int(int n) {
 
 int is_palindrome(int n) {
     return n == reverse_int(n);
+}
+
+int gcd(int m, int n) {
+    int tmp;
+    while (m) {
+        tmp = m;
+        m = n % m;
+        n = tmp;
+    }
+    return n;
+}
+
+int lcm(int m, int n) {
+    return m / gcd(m, n) * n;
 }
