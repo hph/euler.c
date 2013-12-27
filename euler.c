@@ -67,6 +67,17 @@ int problem_6(void) {
     return pow(sum, 2) - sum_of_squares;
 }
 
+int problem_7(void) {
+    int i = 0, n = 0;
+    while (n < 10001) {
+        i++;
+        if (is_prime(i)) {
+            n += 1;
+        }
+    }
+    return i;
+}
+
 int main(void) {
     printf("Problem #1: %i\n", problem_1());
     printf("Problem #2: %i\n", problem_2());
@@ -74,5 +85,6 @@ int main(void) {
     printf("Problem #4: %i\n", problem_4());
     printf("Problem #5: %i\n", problem_5());
     printf("Problem #6: %i\n", problem_6());
+    printf("Problem #7: %i\n", problem_7());
     return 0;
 }
